@@ -1,4 +1,4 @@
-var mysql = require('mysql');
+
 var express = require('express');
 var app = express();
 var ejs = require('ejs');
@@ -23,10 +23,9 @@ app.use("/static", express.static("public"));
 app.use("/static", express.static("bower_components"));
 
 
-app.get('/', function(req, res) {
-    res.render('login');
-})
-
+app.get('/', function (req, res) {
+  res.render('product-details', {});
+});
 
 
 
